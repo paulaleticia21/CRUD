@@ -40,7 +40,7 @@ mvn spring-boot:run
 # POST:
 curl -X POST http://localhost:8080/consultations \
 -H "Content-Type: application/json" \
--d '{"id":"1", "patientName":"Paula Leticia Braz", "doctorName":"Dr. Smith", "date":"2023-04-23"}'
+-d '{"id":"1", "patientName":"Paula Leticia Braz", "doctorName":"Dr. Smith"}'
 
 # Get List
 curl -X GET http://localhost:8080/consultations
