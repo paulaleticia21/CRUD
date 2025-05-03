@@ -13,6 +13,7 @@ public class Consultation {
     private String id;
     private String patientName;
     private String doctorName;
+    private LocalDate date;
 
     @DynamoDBHashKey
     public String getId() {
@@ -38,5 +39,7 @@ public class Consultation {
     public void setDoctorName(String doctorName) {
         this.doctorName = doctorName;
     }
+
+    public void setDate(LocalDate date){ this.date = date; }
 
 }

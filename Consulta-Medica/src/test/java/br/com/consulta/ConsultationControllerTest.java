@@ -9,8 +9,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.http.ResponseEntity;
-
-
+import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
@@ -31,12 +30,13 @@ public class ConsultationControllerTest {
     public void testCreateConsultation() {
         Consultation consultation = new Consultation();
         consultation.setId("1");
-        consultation.setPatientName("Paula Leticia ");
+        consultation.setPatientName("Paula Leticia");
         consultation.setDoctorName("Dr. Smith");
+        consultation.setDate(LocalDate.parse("2025-09-08")); // Corrected date format
 
         when(consultationService.createConsultation(any(Consultation.class))).thenReturn(consultation);
 
-        Consultation createdConsultation = consultationController.createConsultation(consultation);
+        Consultation createdConsultation = consultationController.createConsultation(consultation).getBody();
 
         assertEquals("Paula Leticia", createdConsultation.getPatientName());
         verify(consultationService, times(1)).createConsultation(consultation);
