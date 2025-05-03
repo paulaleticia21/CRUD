@@ -1,4 +1,8 @@
 package br.com.consentimento.exception;
 
-public enum StatusConsentimento {
+public enum StatusConsent {
+
+    ATIVO,
+    INATIVO,
+    VENCIDO
 }
