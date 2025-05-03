@@ -3,7 +3,7 @@
 https://github.com/paulaleticia21/Crud-Consulta.git
 
 # Entre na pasta
-cd consulta-medica
+cd consulta-medica/src
 
 # Compile o projeto
 mvn clean compile
