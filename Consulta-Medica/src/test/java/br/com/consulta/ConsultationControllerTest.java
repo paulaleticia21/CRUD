@@ -32,7 +32,7 @@ public class ConsultationControllerTest {
         consultation.setId("1");
         consultation.setPatientName("Paula Leticia");
         consultation.setDoctorName("Dr. Smith");
-        consultation.setDate(LocalDate.parse("2025-09-08")); // Corrected date format
+        consultation.setDate(LocalDate.parse("2025-09-08")); 
 
         when(consultationService.createConsultation(any(Consultation.class))).thenReturn(consultation);
 
